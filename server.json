@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.sourcegraph/mcp",
+  "title": "Sourcegraph MCP Server",
+  "description": "Sourcegraph code search, semantic search, go-to-definition, find-references, and diff search.",
+  "repository": {
+    "url": "https://github.com/sourcegraph-community/mcpregistry",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://{sourcegraph_hostname}/.api/mcp",
+      "variables": {
+        "sourcegraph_hostname": {
+          "description": "Hostname of your Sourcegraph instance (e.g., sourcegraph.mycompany.com)",
+          "isRequired": true
+        }
+      }
+    }
+  ]
+}
